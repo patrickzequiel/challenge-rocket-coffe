@@ -36,4 +36,13 @@
 
 img {
   width: 800px;
+  display: flex;
+}
+
+.blur-svg {
+  position: absolute;
+}
+
+.blur-left {
+  left: 0;
 }

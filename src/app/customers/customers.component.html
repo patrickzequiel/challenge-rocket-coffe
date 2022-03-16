@@ -1,1 +1,6 @@
 <p>customers works!</p>
+<ul>
+  <li *ngFor="let customer of customers$ | async">
+    <a [routerLink]="['/customers', customer.id]">{{ customer.name }}</a>
+  </li>
+</ul>

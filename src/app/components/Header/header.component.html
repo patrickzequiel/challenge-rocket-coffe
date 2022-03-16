@@ -1,14 +1,27 @@
 <!-- Toolbar -->
 <header>
+  <div *ngIf="isMobileDisplay">
+    <p>
+      <mat-toolbar>
+        <button
+          mat-icon-button
+          class="example-icon"
+          aria-label="Example icon-button with menu icon"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+      </mat-toolbar>
+    </p>
+  </div>
   <div class="logo">
-    <img src="../../../assets/Logo.svg" alt="logo" />
+    <img src="../../../assets/logo-desktop.svg" alt="logo" />
   </div>
   <nav class="header-nav">
-    <a [routerLink]=[”/some-page”]>Home</a>
+    <a [routerLink]="['/']">Home</a>
     <a>Menu</a>
     <a>Recompensas</a>
-    <a>Gift Cards</a>
-    <a routerLink=”/shop”>Lojas</a>
+    <a [routerLink]="['/customers']">Customers</a>
+    <a [routerLink]="['/shop']">Lojas</a>
   </nav>
   <div class="btn-container">
     <button class="btn">Pegar meu Cafe</button>
